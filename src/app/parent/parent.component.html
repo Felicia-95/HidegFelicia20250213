@@ -1,1 +1,12 @@
 <p>parent works!</p>
+<label>Első szám:</label>
+<input type="number" [(ngModel)]="a">
+
+<label>Második szám:</label>
+<input type="number" [(ngModel)]="b">
+
+<!-- ChildComponent meghívása és az adatok átadása property bindinggal -->
+<app-child [num1]="a" [num2]="b" (result)="onResultCalculated($event)"></app-child>
+
+<!-- Az eredmény megjelenítése -->
+<p>Eredmény: {{ result }}</p>

@@ -1,9 +1,26 @@
 <p>products works!</p>
-<table>
+<h2>Terméklista</h2>
+<table border="1">
     <thead>
+        <tr>
+            <th>Termék neve</th>
+            <th>Ár</th>
+            <th>Értékelés</th>
+            <th>Elérhető mennyiség</th>
+          </tr>
         
     </thead>
     <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{ product.title }}</td> <!-- Termék neve -->
+            <td>{{ product.price }} $</td> <!-- Termék ára -->
+            <td>{{ product.rating }} ⭐</td> <!-- Termék értékelése -->
+            <td>{{ product.stock }}</td> <!-- Termék raktárkészlete -->
+          </tr>
 
     </tbody>
 </table>
+
+
+
+
