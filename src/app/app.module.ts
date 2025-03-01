@@ -10,21 +10,14 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    ParentComponent,
-    ChildComponent,
-    ProductsComponent,
-    NavigationComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FormsModule,
-    HttpClientModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
+
+
+
+  @NgModule({
+    declarations: [AppComponent, ProductsComponent],
+    imports: [BrowserModule, HttpClientModule],
+    providers: [],
+    bootstrap: [AppComponent],
+  })
+
 export class AppModule { }
